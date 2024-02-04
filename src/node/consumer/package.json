@@ -7,7 +7,7 @@
     "build": "node esbuild.js",
     "dev": "tsx watch --ignore node_modules src/index.js | pino-pretty",
     "start": "node dist/index.cjs",
-    "lint": "eslint . --ext .ts,.js"
+    "lint": "nx lint --ext .ts,.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -29,5 +29,8 @@
     "sequelize": "^6.31.1",
     "torrent-stream": "^1.2.1",
     "user-agents": "^1.0.1444"
+  },
+  "nx": {
+    "includedScripts": []
   }
 }

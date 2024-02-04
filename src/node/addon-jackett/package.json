@@ -7,7 +7,7 @@
     "build": "node esbuild.js",
     "dev": "tsx watch --ignore node_modules src/index.js",
     "start": "node dist/index.cjs",
-    "lint": "eslint . --ext .ts,.js"
+    "lint": "nx lint --ext .ts,.js"
   },
   "dependencies": {
     "@putdotio/api-client": "^8.42.0",
@@ -35,5 +35,8 @@
     "video-name-parser": "^1.4.6",
     "xml-js": "^1.6.11",
     "xml2js": "^0.6.2"
+  },
+  "nx": {
+    "includedScripts": []
   }
 }
