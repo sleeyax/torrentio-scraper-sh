@@ -4,10 +4,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "node esbuild.js",
+    "build": "nx build",
     "dev": "tsx watch --ignore node_modules src/index.js",
     "start": "node dist/index.cjs",
-    "lint": "eslint . --ext .ts,.js"
+    "lint": "nx lint --ext .ts,.js"
   },
   "dependencies": {
     "@knightcrawler/common": "file:../common",
@@ -38,5 +38,8 @@
     "swagger-stats": "^0.99.7",
     "ua-parser-js": "^1.0.36",
     "user-agents": "^1.0.1444"
+  },
+  "nx": {
+    "includedScripts": []
   }
 }

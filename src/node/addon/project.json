@@ -1,0 +1,40 @@
+{
+  "name": "addon",
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "addon/dist",
+        "main": "addon/src/index.js",
+        "tsConfig": "addon/tsconfig.lib.json",
+        "assets": [
+          {
+            "input": "addon/static",
+            "glob": "**",
+            "output": "static"
+          }
+        ],
+        "format": [
+          "cjs"
+        ],
+        "minify": true,
+        "bundle": true
+      }
+    },
+    "dev": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "dev"
+      }
+    },
+    "start": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "start"
+      }
+    }
+  }
+}
